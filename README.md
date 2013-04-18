@@ -14,7 +14,7 @@
 
 - Run command to start server:
 
-    $ vertx run com.xplusz.server.VertxFeedApplication -cp ./target/classes -repo vert-x.github.io
+    $ vertx run me.timtang.server.VertxFeedApplication -cp ./target/classes -repo vert-x.github.io
 
 > Server will start at port 8080, visit <http://localhost:8080>
 
@@ -22,7 +22,7 @@
 
 - Run following command to start server:
 
-    $ vertx run com.xplusz.benchmark.VertxFeedBenchmark -cp ./target/classes -repo vert-x.github.io
+    $ vertx run me.timtang.benchmark.VertxFeedBenchmark -cp ./target/classes -repo vert-x.github.io
 
 - Install siege:
 
@@ -33,3 +33,4 @@
     $ siege -c100 -d1 -r100 http://localhost:8080/post
 
 > More information about siege, please refer:<http://www.joedog.org/siege-home/>
+
