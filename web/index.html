@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link rel="stylesheet/less" href="css/bootstrap.less">
+        <script src="js3rdparty/less-1.2.1.min.js"></script>
+        <script src='js3rdparty/jquery-1.7.1.min.js'></script>
+        <script src='js3rdparty/bootstrap-tabs.js'></script>
+        <title>Welcome to XZFeed</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="sidebar">
+                <form class="form-stacked">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="span2" data-bind="value: username"
+                    />
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="span2" data-bind="value: password"
+                    />
+                    <br>
+                    <br>
+                    <input type="submit" class="btn primary" value="Login" data-bind="click: login"
+                    />
+                </form>
+                <br>
+                <div data-bind="visible: sessionID() != ''">
+                    <h3>Logged in as</h3>
+                    <h3>
+                        <strong data-bind="text: username"></strong>
+                    </h3>
+                </div>
+            </div>
+            <div class="content">
+                <div class="hero-unit">
+                    <h1>Welcome to XZFeed</h1>
+                    <p>I hope you will enjoy our fantastic feed function.....</p>
+                    <p>Available users: {"username":"tim", "password":'123'},{"user": "andy",
+                        "password":"123"} followed by each other!</p>
+                </div>
+                <div class="row">
+                    <div class="pill-content">
+                        <div class="active" id="shop">
+                            <div class="span16">
+                                <form>
+                                    <fieldset>
+                                        <div class="actions">
+                                            <input type="text" id="message" data-bind="value: message" />
+                                            <input type="submit" class="btn primary" value="Submit Message" data-bind="click: submitMsg"
+                                            />
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="span16">
+                                <table class="bordered-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Author</th>
+                                            <th>Message</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-bind="foreach: msgs">
+                                        <tr>
+                                            <td data-bind="text: user"></td>
+                                            <td data-bind="text: text"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src='js3rdparty/sockjs-0.2.1.min.js'></script>
+    <script src='js3rdparty/knockout-2.0.0.js'></script>
+    <script src='js/vertxbus.js'></script>
+    <script src='js/client_app.js'></script>
+</html>
+

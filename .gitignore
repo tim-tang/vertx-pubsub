@@ -1,0 +1,31 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.rar
+*.tar
+*.7z
+*.gz
+*.dmg
+
+# IDE generated files #
+.settings
+.classpath
+.project
+*.iml
+.idea/
+target/
+target-eclipse/
+bin/
+.editorconfig
+.DS_Store
+
+# Modules
+mods/
+
+# Log
+stacktrace.log
+/web-app/plugins
+/web-app/WEB-INF/classes
