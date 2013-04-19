@@ -27,13 +27,13 @@ public class VertxFeedBenchmark extends BusModBase{
         // create a handler to populate mock data when the persistor is loaded
         Handler<String> mockDataHandler = new Handler<String>() {
             public void handle(String message) {
-                container.deployVerticle("com.xplusz.persistor.MockDataInitializer");
+                container.deployVerticle("me.timtang.persistor.MockDataInitializer");
             }
         };
         // deploy mongodb persistor module and pass in the handler.
         container.deployModule("vertx.mongo-persistor-v1.2", null, 1, mockDataHandler);
         // deploy feed broadcaster verticle.
-        container.deployVerticle("com.xplusz.broadcaster.VertxFeedBroadcaster");
+        container.deployVerticle("me.timtang.broadcaster.VertxFeedBroadcaster");
         
         // save message then broadcast to all followers.
         Handler<HttpServerRequest> broadcastHandler = new Handler<HttpServerRequest>() {

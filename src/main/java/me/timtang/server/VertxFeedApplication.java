@@ -52,7 +52,7 @@ public class VertxFeedApplication extends BusModBase {
 		// create a handler to populate mock data when the persistor is loaded
 		Handler<String> mockDataHandler = new Handler<String>() {
 			public void handle(String message) {
-				container.deployVerticle("com.xplusz.persistor.MockDataInitializer");
+				container.deployVerticle("me.timtang.persistor.MockDataInitializer");
 			}
 		};
 		
@@ -61,7 +61,7 @@ public class VertxFeedApplication extends BusModBase {
 		// deploy auth manager to handle the authentication
 		container.deployModule("vertx.auth-mgr-v1.1");
 		// deploy feed broadcaster verticle.
-		container.deployVerticle("com.xplusz.broadcaster.VertxFeedBroadcaster");
+		container.deployVerticle("me.timtang.broadcaster.VertxFeedBroadcaster");
 		// deploy web server, with the configuration we defined above.
 		container.deployModule("vertx.web-server-v1.0", webServerConf);
     }
