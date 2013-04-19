@@ -34,3 +34,8 @@
 
 > More information about siege, please refer:<http://www.joedog.org/siege-home/>
 
+
+## Reference:
+
+- [Vertx.io Eclipse dev environment](http://timtang.me/blog/2013/04/13/vertx-eclipse-dev/)
+- [Vertx.io Introduction](http://timtang.me/blog/2013/04/18/vertx-pubsub/)
