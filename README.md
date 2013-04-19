@@ -8,7 +8,7 @@
 
 - Start mongodb on default port
 
-- Go to $WORK_SPACE/vertx-feed and run command:
+- Go to $WORK_SPACE/vertx-pubsub and run command:
 
     $ mvn clean compile
 
